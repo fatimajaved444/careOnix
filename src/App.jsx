@@ -4,21 +4,33 @@ import Header from "./pages/Header"
 import Footer from "./pages/Footer"
 import Login from "./pages/Login"
 
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Donation from "./pages/Donation";
+import Success from "./pages/Success";
 
-
-
-
-function App() {
+const App = () => {
   return (
+   
+<>
+   {/* <Header/>  */}
+   <Router>
+      <Routes>
+        {/* Route for the Donation page */}
+        <Route path="/" element={<Donation />} />
+
+        {/* Route for the Success page */}
+        <Route path="/success" element={<Success />} />
+      </Routes>
+    </Router>
+
+    {/* <Footer/> */}
     
-    ///<Header/>
-    <Footer/>
-  //// <Login/>
-  )
 
-}
+   </>
+  );
+};
 
-export default App
-
+export default App;
 
 
